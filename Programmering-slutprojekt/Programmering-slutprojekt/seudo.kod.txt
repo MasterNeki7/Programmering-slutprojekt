@@ -1,0 +1,25 @@
+Raylib Space invaders.
+Röra sig med W,A,S,D
+Skjuta på SPACE
+Dasha åt hållet man åker med på SHIFT
+
+Fiender närmar sig långsammt och skjuter ibland
+Fiender får mer HP varje wave
+Fiender har olika variationer
+Fiender kan ibland droppa temporära krafter
+Fiender ger dig pengar beroende på vilken fiende det va (Normalt kommer det vara 3 guld, 5 guld, 7 guld, 10 guld, 15 guld och 50 guld från bossen)
+
+Ifall man vinner kommer det en wave 2
+Efter wave 3 så är det en ny round
+Mellan varje round så kommer en boss som kommer bli svårare ju längre in i spelet du är
+Efter en round är över kommer nästa round vara 1 wave längre
+Efter varje round kan du köpa uppgraderingar
+
+MORE POWER = Mer skada på skotten
+MORE SHOTS = Mer skott som skjuts åt gången
+MORE HP = Mer HP på ditt skepp
+MORE SPREAD = mer sprdining på skotten (Låses upp efter att MORE SHOTS är köpt)
+NEW SHIP = Nytt skepp med en annan sprite som kommer vara som en prestige (Alla uppgraderingar resettas men dem blir starkare)
+
+
+
