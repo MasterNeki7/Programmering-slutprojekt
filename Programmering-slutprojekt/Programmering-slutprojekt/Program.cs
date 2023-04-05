@@ -12,16 +12,16 @@ float bulletSpeed = 15;
 
 //Texturer genom att använda "Texture2D "Namn" = Raylib.LoadTexture("Fil.namn");"
 Texture2D playerShip = Raylib.LoadTexture("Placeholder.png");
-Texture2D easyEnemy = Raylib.LoadTexture("");
-Texture2D mediumEnemy = Raylib.LoadTexture("");
-Texture2D hardEnemy = Raylib.LoadTexture("");
+Texture2D easyEnemy = Raylib.LoadTexture("easyEnemy.png");
+Texture2D mediumEnemy = Raylib.LoadTexture("mediumEnemy.png");
+Texture2D hardEnemy = Raylib.LoadTexture("hardEnemy.png");
 Texture2D bossEnemy = Raylib.LoadTexture("");
 Texture2D backGround = Raylib.LoadTexture("");
 Texture2D guiCoin = Raylib.LoadTexture("");
 
 //Hitboxes genom "Rectangle "namn" = new Rectangle(posx, posy, sizex, sizey);"
 Rectangle playerHitbox = new Rectangle(500, 500, 100, 100);
-
+Rectangle enemyHitbox = new Rectangle(300, 500, 100, 100);
 
 
 
@@ -51,7 +51,9 @@ while (Raylib.WindowShouldClose() == false) {
 
         //rita texturer på rektanglar genom "Raylib.DrawTexture(textureInt, (int)rect.x, (int)rect.y, Color.COLOR);"
         Raylib.DrawTexture(playerShip, (int)playerHitbox.x, (int)playerHitbox.y, Color.WHITE);
-
+        Raylib.DrawTexture(easyEnemy, (int)enemyHitbox.x, (int)enemyHitbox.y, Color.WHITE);
+        Raylib.DrawTexture(mediumEnemy, (int)enemyHitbox.x + 100, (int)enemyHitbox.y, Color.WHITE);
+        Raylib.DrawTexture(hardEnemy, (int)enemyHitbox.x + 200, (int)enemyHitbox.y, Color.WHITE);
 
 
     Raylib.EndDrawing();
