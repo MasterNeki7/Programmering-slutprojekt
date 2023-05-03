@@ -1,9 +1,9 @@
 ﻿using Raylib_cs;
-Raylib.InitWindow(1000, 900, "Space Shooter");
+Raylib.InitWindow(1000, 1000, "Space Shooter");
 Raylib.SetTargetFPS(60);
 
 //Variabler för Spel
-float backGroundScrollSpeed = 1.3f;
+float backGroundScrollSpeed = 5;
 
 float playerShipSpeed = 7.5f;
 float playerProjectileSpeed = 15;
@@ -28,8 +28,8 @@ Texture2D hardEnemy = Raylib.LoadTexture("hardEnemy.png");
 Texture2D bossEnemy = Raylib.LoadTexture("");
 Texture2D enemyProjectile = Raylib.LoadTexture("");
 
-Texture2D backGround1 = Raylib.LoadTexture("background.png");
-Texture2D backGround2 = Raylib.LoadTexture("background.png");
+Texture2D backGround1 = Raylib.LoadTexture("bkg.png");
+Texture2D backGround2 = Raylib.LoadTexture("bkg.png");
 
 Texture2D powerPowerUp = Raylib.LoadTexture("");
 Texture2D shotsPowerUp = Raylib.LoadTexture("");
@@ -97,33 +97,33 @@ while (Raylib.WindowShouldClose() == false)
     bkg2Rect.y += backGroundScrollSpeed;
 
     //Kod för att få bakgrunden att loopa
-    if (bkg1Rect.y > 1000)
+    if (bkg1Rect.y >= 1000)
     {
         bkg1Rect.y = -1000;
     }
 
-    if (bkg2Rect.y > 1000)
+    if (bkg2Rect.y >= 1000)
     {
         bkg2Rect.y = -1000;
     }
 
     //Kod för att inte låta spelaren överskrida skärmens dimensioner
-    if (playerHitbox.x > 900)
+    if (playerHitbox.x >= 900)
     {
         playerHitbox.x = 900;
     }
 
-    else if (playerHitbox.x < 0)
+    else if (playerHitbox.x <= 0)
     {
         playerHitbox.x = 0;
     }
 
-    if (playerHitbox.y > 800)
+    if (playerHitbox.y >= 900)
     {
-        playerHitbox.y = 800;
+        playerHitbox.y = 900;
     }
 
-    else if (playerHitbox.y < 0)
+    else if (playerHitbox.y <= 0)
     {
         playerHitbox.y = 0;
     }
@@ -160,8 +160,6 @@ while (Raylib.WindowShouldClose() == false)
     {
         hardEnemySpeed = -hardEnemySpeed;
     }
-
-
 
 
     Raylib.BeginDrawing();
